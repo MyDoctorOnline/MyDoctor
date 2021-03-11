@@ -1,27 +1,25 @@
-package com.oruel.testmydoc.ui.notifications
+package com.oruel.testmydoc.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.oruel.testmydoc.R
 import com.oruel.testmydoc.databinding.FragmentDashboardBinding
-import com.oruel.testmydoc.databinding.FragmentNotificationsBinding
-import com.oruel.testmydoc.ui.dashboard.DashboardViewModel
 
-class NotificationsFragment : Fragment() {
+class CallDoctorFragment : Fragment() {
+
+    lateinit var view: FragmentDashboardBinding
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val view = FragmentNotificationsBinding.inflate(inflater, container, false)
-        view.vm = ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        view = FragmentDashboardBinding.inflate(inflater, container, false)
+        view.vm = ViewModelProvider(this).get(DashboardViewModel::class.java)
         return view.root
     }
 }

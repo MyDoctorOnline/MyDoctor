@@ -1,4 +1,4 @@
-package com.oruel.testmydoc.ui.home
+package com.oruel.testmydoc.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,18 +10,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.oruel.testmydoc.R
 import com.oruel.testmydoc.databinding.FragmentDashboardBinding
-import com.oruel.testmydoc.databinding.FragmentHomeBinding
+import com.oruel.testmydoc.databinding.FragmentNotificationsBinding
 import com.oruel.testmydoc.ui.dashboard.DashboardViewModel
 
-class HomeFragment : Fragment() {
+class OrderTicketFragment : Fragment() {
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val view = FragmentHomeBinding.inflate(inflater, container, false)
-        view.vm = ViewModelProvider(this).get(HomeViewModel::class.java)
+        val view = FragmentNotificationsBinding.inflate(inflater, container, false)
+        view.vm = ViewModelProvider(this).get(NotificationsViewModel::class.java)
         return view.root
     }
 }
