@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">TestMyDoc</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_call_doctor">Call doctor</string>
+    <string name="title_order_ticket">Order ticket</string>
+    <string name="title_authorization">Authorization</string>
+    <string name="title_personal_area">Personal Area</string>
+    <string name="title_select_hospital">Select Hospital</string>
+
 </resources>

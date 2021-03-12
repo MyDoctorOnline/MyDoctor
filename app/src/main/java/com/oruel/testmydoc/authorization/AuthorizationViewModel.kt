@@ -1,4 +1,6 @@
 package com.oruel.testmydoc.authorization
 
-class AuthorizationViewModel {
+import androidx.lifecycle.ViewModel
+
+class AuthorizationViewModel:ViewModel() {
 }

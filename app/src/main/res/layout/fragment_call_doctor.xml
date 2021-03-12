@@ -2,14 +2,14 @@
 <layout>
     <data>
         <variable
-            name="vm" type="com.oruel.testmydoc.ui.dashboard.DashboardViewModel" />
+            name="vm" type="com.oruel.testmydoc.call_doctor.CallDoctorViewModel" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".call_doctor.CallDoctorFragment">
 
     <TextView
         android:layout_width="match_parent"

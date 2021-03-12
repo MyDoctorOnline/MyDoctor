@@ -1,6 +1,6 @@
-package com.oruel.testmydoc.authorization
+package com.oruel.testmydoc.personal_area
 
 import androidx.lifecycle.ViewModel
 
-class AuthorizationViewModel:ViewModel() {
+class PersonalAreaViewModel:ViewModel() {
 }

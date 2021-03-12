@@ -1,0 +1,11 @@
+GET
+https://82.209.194.34:8877/views/DisplayScheduleWorkCabinet.php
+
+
+
+
+%%%
+# GET
+# https://82.209.194.34:8877/views/DisplayScheduleWorkCabinet.php
+
+# Error: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target

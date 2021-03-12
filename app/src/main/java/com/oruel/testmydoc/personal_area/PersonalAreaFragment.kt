@@ -1,4 +1,4 @@
-package com.oruel.testmydoc.authorization
+package com.oruel.testmydoc.personal_area
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.oruel.testmydoc.databinding.FragmentAuthorizationBinding
+import com.oruel.testmydoc.databinding.FragmentPersonalAreaBinding
 
-class AuthorizationFragment:Fragment() {
+class PersonalAreaFragment:Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = FragmentAuthorizationBinding.inflate(inflater, container, false)
-        view.vm = ViewModelProvider(this).get(AuthorizationViewModel::class.java)
+        val view = FragmentPersonalAreaBinding.inflate(inflater, container, false)
+        view.vm = ViewModelProvider(this).get(PersonalAreaViewModel::class.java)
         return view.root
     }
 }

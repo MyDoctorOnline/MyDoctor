@@ -1,10 +1,10 @@
-package com.oruel.testmydoc.ui.home
+package com.oruel.testmydoc.select_hospital
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class SelectHospitalViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is home Fragment"

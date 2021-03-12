@@ -3,23 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_select_hospital">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.oruel.testmydoc.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_call_doctor"
+        android:name="com.oruel.testmydoc.call_doctor.CallDoctorFragment"
+        android:label="@string/title_call_doctor"
+        tools:layout="@layout/fragment_call_doctor" >
+        <action
+            android:id="@+id/action_navigation_call_doctor_to_navigation_authorization"
+            app:destination="@id/navigation_authorization" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.oruel.testmydoc.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_order_ticket"
+        android:name="com.oruel.testmydoc.order_ticket.OrderTicketFragment"
+        android:label="@string/title_order_ticket"
+        tools:layout="@layout/fragment_order_ticket" >
+        <action
+            android:id="@+id/action_navigation_order_ticket_to_navigation_authorization"
+            app:destination="@id/navigation_authorization" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.oruel.testmydoc.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_authorization"
+        android:name="com.oruel.testmydoc.authorization.AuthorizationFragment"
+        android:label="@string/title_authorization"
+        tools:layout="@layout/fragment_authorization" />
+    <fragment
+        android:id="@+id/navigation_personal_area"
+        android:name="com.oruel.testmydoc.personal_area.PersonalAreaFragment"
+        android:label="@string/title_personal_area"
+        tools:layout="@layout/fragment_personal_area" />
+    <fragment
+        android:id="@+id/navigation_select_hospital"
+        android:name="com.oruel.testmydoc.select_hospital.view.SelectHospitalNavigationControllerFragment"
+        android:label="@string/title_select_hospital"
+        tools:layout="@layout/fragment_select_hospital" >
+        <action
+            android:id="@+id/action_navigation_select_hospital_to_navigation_order_ticket"
+            app:destination="@id/navigation_order_ticket" />
+        <action
+            android:id="@+id/action_navigation_select_hospital_to_navigation_call_doctor"
+            app:destination="@id/navigation_call_doctor" />
+    </fragment>
+
 </navigation>

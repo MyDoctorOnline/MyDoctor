@@ -11,7 +11,7 @@ import com.oruel.testmydoc.R
 import com.oruel.testmydoc.databinding.FragmentSelectHospitalBinding
 import com.oruel.testmydoc.select_hospital.SelectHospitalViewModel
 
-class SelectHospitalFragment : Fragment(), NavigationSelectHospitalInterface{
+class SelectHospitalNavigationControllerFragment : Fragment(), SelectHospitalNavigationControllerInterface{
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -20,7 +20,7 @@ class SelectHospitalFragment : Fragment(), NavigationSelectHospitalInterface{
     ): View? {
         val view = FragmentSelectHospitalBinding.inflate(inflater, container, false)
         view.vm = ViewModelProvider(this).get(SelectHospitalViewModel::class.java)
-        view.navigation
+        view.navigationController = this
         return view.root
     }
 
