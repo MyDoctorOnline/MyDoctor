@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">TestMyDoc</string>
-    <string name="title_home">Home</string>
     <string name="title_call_doctor">Call doctor</string>
     <string name="title_order_ticket">Order ticket</string>
     <string name="title_authorization">Authorization</string>
