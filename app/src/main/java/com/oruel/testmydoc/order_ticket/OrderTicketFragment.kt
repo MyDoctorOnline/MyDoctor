@@ -1,13 +1,15 @@
 package com.oruel.testmydoc.order_ticket
 
-import android.content.ClipData.Item
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.iterator
+import android.widget.ArrayAdapter
+
+
+import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -36,5 +38,22 @@ class OrderTicketFragment : Fragment() {
         }
 
         return view.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        val all_rooms: Array<String> = arrayOf("1","2","3")
+        val rooms: Spinner = view.findViewById(R.id.rooms)
+        val adapter = ArrayAdapter(
+            requireContext(), // Context
+            android.R.layout.simple_spinner_item, // Layout
+        all_rooms
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line)
+        rooms.adapter = adapter
+
+
     }
 }
