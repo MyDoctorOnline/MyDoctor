@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_select_hospital, R.id.navigation_personal_area))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        NetworkModule().getRoom(40)
+            // NetworkModule().getRoom(40)
     }
-
 
 }
