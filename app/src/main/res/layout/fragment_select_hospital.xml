@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable name="vm" type="com.oruel.testmydoc.select_hospital.SelectHospitalViewModel" />
         <variable name="navigationController"
             type="com.oruel.testmydoc.select_hospital.view.SelectHospitalNavigationControllerInterface" />

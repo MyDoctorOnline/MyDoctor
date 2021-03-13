@@ -15,18 +15,29 @@
         android:background="@drawable/cardview_bg">
 
         <TextView
-            android:id="@+id/ticket_name"
+            android:id="@+id/ticket_room_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ticket 11"
+            android:text="Ticket Room Name"
             android:textAlignment="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:textSize="10pt"
             />
-
+        <TextView
+            android:id="@+id/ticket_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ticket time"
+            android:textAlignment="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/ticket_room_name"
+            app:layout_constraintStart_toStartOf="@id/ticket_room_name"
+            android:textSize="8pt"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

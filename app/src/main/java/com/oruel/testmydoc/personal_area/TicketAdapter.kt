@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.oruel.testmydoc.R
-import com.oruel.testmydoc.data_class.Ticket
+import com.oruel.testmydoc.data_class.SavingTicket
 
-class TicketAdapter(private val ticketList: List<Ticket>): RecyclerView.Adapter<TicketAdapter.TicketViewHolder>() {
+class TicketAdapter(val viewmodel: PersonalAreaViewModel, private val ticketList: List<SavingTicket>): RecyclerView.Adapter<TicketAdapter.TicketViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TicketViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.fragment_personal_area, parent, false)
@@ -19,16 +19,15 @@ class TicketAdapter(private val ticketList: List<Ticket>): RecyclerView.Adapter<
     override fun onBindViewHolder(holder: TicketViewHolder, position: Int) {
         val currentTicket = ticketList[position]
 
-        //currentTicket name should be passed to ticket_name textView
+        holder.ticketRoomName.text = currentTicket.room_name
+        holder.ticketTime.text = currentTicket.ticket.time
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = ticketList.size
 
     class TicketViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val ticketName: TextView = itemView.findViewById(R.id.ticket_name)
+        var ticketRoomName: TextView = itemView.findViewById(R.id.ticket_room_name)
+        var ticketTime: TextView= itemView.findViewById(R.id.ticket_time)
 
     }
-
 }
