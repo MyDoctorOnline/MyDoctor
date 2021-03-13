@@ -1,6 +1,7 @@
 package com.oruel.testmydoc
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -22,6 +23,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_select_hospital, R.id.navigation_personal_area))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        NetworkModule().getRoom(40)
+//        NetworkModule().getRoom(40)
     }
+}
+
+fun l(s:String){
+    Log.v("MyTag",s)
 }
