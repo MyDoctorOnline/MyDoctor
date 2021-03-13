@@ -61,8 +61,9 @@ class PreferencesDelegate<T : Any>
     }
 
     companion object {
-        fun createSharedPreferences(context: Context): SharedPreferences {
-            return context.getSharedPreferences(NAME_DEFAULT, Context.MODE_PRIVATE)
-        }
+
     }
+}
+fun createSharedPreferences(context: Context): SharedPreferences {
+    return context.getSharedPreferences(NAME_DEFAULT, Context.MODE_PRIVATE)
 }

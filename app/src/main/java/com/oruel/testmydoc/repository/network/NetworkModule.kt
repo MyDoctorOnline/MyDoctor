@@ -1,6 +1,7 @@
 package com.oruel.testmydoc.repository.network
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import com.oruel.testmydoc.data_class.ListDepartment
 import com.oruel.testmydoc.data_class.Room
 import okhttp3.OkHttpClient
@@ -15,11 +16,11 @@ import java.security.cert.X509Certificate
 import javax.net.ssl.*
 
 
-class NetworkModule {
+class NetworkModule:NetworkInterface {
     private val baseUrl = "https://82.209.194.34:8877/views/"
-    private lateinit var service: NetworkInterface
+    private lateinit var service: NetworkServiceInterface
 
-    fun getListDepartment() {
+    override fun getListDepartment(liveData: MutableLiveData<ListDepartment>) {
         if (!::service.isInitialized)
             init()
         service.getListDepartment().enqueue(object : Callback<ListDepartment> {
@@ -38,7 +39,7 @@ class NetworkModule {
         })
     }
 
-    fun getRoom(id:Long){
+    override fun getRoom(liveData: MutableLiveData<Room>, id: Long){
         if (!::service.isInitialized)
             init()
         service.getRoom(id).enqueue(object : Callback<Room> {
@@ -88,7 +89,7 @@ class NetworkModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        service = retrofit.create(NetworkInterface::class.java)
+        service = retrofit.create(NetworkServiceInterface::class.java)
     }
 
 
