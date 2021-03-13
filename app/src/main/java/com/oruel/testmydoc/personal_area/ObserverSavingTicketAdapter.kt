@@ -3,6 +3,7 @@ package com.oruel.testmydoc.personal_area
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.oruel.testmydoc.R
@@ -15,6 +16,7 @@ class ObserverSavingTicketAdapter(private var ticketList: List<SavingTicket>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TicketViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.view_holder_tickets, parent, false)
+
 
         return TicketViewHolder(itemView)
     }
@@ -41,6 +43,7 @@ class ObserverSavingTicketAdapter(private var ticketList: List<SavingTicket>) :
             ticketTime.text = ticket.ticket.time
         }
     }
+
 }
 
 interface ObserverSavingTicket {
