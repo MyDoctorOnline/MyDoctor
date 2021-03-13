@@ -28,16 +28,18 @@ class PersonalAreaFragment : Fragment() {
             SavingTicket(Ticket("456", "456", "456"), "456", "456")
         ))
         val layoutManager = StaggeredGridLayoutManager(
-            1,
+            3,
             LinearLayoutManager.VERTICAL
         )
         val vm = ViewModelProviders.of(
             this,
             factory
         ).get(PersonalAreaViewModel::class.java)
+
         view.adapterRecycler = adapter
         view.layoutManager = layoutManager
         view.vm = vm
+
 //        l(view.adapterRecycler.toString())
         vm.observeSavingTicket(adapter)
         return view.root
