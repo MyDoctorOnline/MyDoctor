@@ -24,6 +24,4 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
         NetworkModule().getRoom(40)
     }
-
-
 }
