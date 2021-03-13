@@ -10,110 +10,105 @@
             type="com.oruel.testmydoc.authorization.AuthorizationViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="5dp">
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9">
+
+        </androidx.constraintlayout.widget.Guideline>
 
         <ImageView
             android:id="@+id/imageLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/first"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logo_bood"
+            tools:ignore="ContentDescription" />
 
-
-        <TextView
-            android:id="@+id/surName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:text="@string/surname"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
 
         <EditText
             android:id="@+id/enterSurName"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
             android:hint="@string/surname"
-            android:textSize="15sp"
+            android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/enterFirstName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/surName" />
+            app:layout_constraintTop_toBottomOf="@+id/second"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
 
 
-        <TextView
-            android:id="@+id/firstName"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/enterFirstName"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:gravity="center"
-            android:text="@string/name"
+            android:hint="@string/name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
             android:textSize="15sp"
-            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/enterPersonalNumber"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/enterSurName" />
 
-        <EditText
-            android:id="@+id/enterFirstName"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:hint="@string/name"
-            android:textSize="15sp"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/firstName" />
-
-
-        <TextView
-            android:id="@+id/personalNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:text="@string/personal_number"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/enterFirstName" />
 
         <EditText
             android:id="@+id/enterPersonalNumber"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:textSize="15sp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
             android:hint="@string/personal_number"
+            android:importantForAutofill="no"
             android:inputType="textCapCharacters"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/enterButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/personalNumber" />
+            app:layout_constraintTop_toBottomOf="@id/enterFirstName"
+            tools:ignore="TextFields" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/enterButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="75dp"
-            android:background="@drawable/enter_button"
+            android:background="@android:drawable/toast_frame"
             android:text="@string/enter"
             android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/end"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/enterPersonalNumber"/>
+            app:layout_constraintTop_toBottomOf="@id/enterPersonalNumber" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -5,13 +5,9 @@
     <string name="title_authorization">Authorization</string>
     <string name="title_personal_area">Personal Area</string>
     <string name="title_select_hospital">Select Hospital</string>
-    <string name="message_to_patients">Уважаемые пациенты!\n Заказать талон на приём к врачу могут только те пациенты, которые зарегистрированы в электронной базе данных. После внесения личной информации система проверит наличие Ваших данных в базе данных регистратуры. Если Вы ранее никогда не были записаны в базе данных регистратуры, то, пожалуйста, обратитесь в регистратуру для заведения амбулаторной карты.</string>
     <string name="surname">Фамилия</string>
-    <string name="exp_surname">*Ваша фамилия на русском языке. Поле не чувствительно к регистру, может вводиться как с заглавной буквы, так и с прописной. \nДанные не сохраняются в открытом доступе, а служат лишь средством вашей идентификации.</string>
     <string name="name">Имя</string>
-    <string name="exp_name">*Ваше имя на русском языке по паспорту.</string>
     <string name="personal_number">Личный номер</string>
-    <string name="exp_personal_number">* Идентификационный номер паспорта (буквы должны быть латинские, большие - 14 символов.</string>
     <string name="enter">Войти</string>
 
 </resources>
