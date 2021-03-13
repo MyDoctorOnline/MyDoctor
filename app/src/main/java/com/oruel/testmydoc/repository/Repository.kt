@@ -2,10 +2,7 @@ package com.oruel.testmydoc.repository
 
 import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
-import com.oruel.testmydoc.data_class.ListDepartment
-import com.oruel.testmydoc.data_class.Room
-import com.oruel.testmydoc.data_class.Ticket
-import com.oruel.testmydoc.data_class.User
+import com.oruel.testmydoc.data_class.*
 import com.oruel.testmydoc.repository.local.PreferencesDelegate
 import com.oruel.testmydoc.repository.network.NetworkInterface
 import com.oruel.testmydoc.repository.network.NetworkModule
@@ -21,7 +18,7 @@ class Repository(preferences: SharedPreferences) : RepositoryInterface {
     private var preferencesTicket by PreferencesDelegate(
         preferences,
         PREFERENCE_TICKET,
-        listOf<Ticket>()
+        listOf<SavingTicket>()
     )
     private val networkServiceModule: NetworkInterface by lazy { NetworkModule() }
 
@@ -42,12 +39,12 @@ class Repository(preferences: SharedPreferences) : RepositoryInterface {
         networkServiceModule.getRoom(liveData, id)
     }
 
-    override fun chooseTicket(liveDataResponse: MutableLiveData<Int>, ticket: Ticket) {
+    override fun chooseTicket(liveDataResponse: MutableLiveData<Int>, ticket: SavingTicket) {
         preferencesTicket = preferencesTicket + ticket
         liveDataResponse.postValue(200)
     }
 
-    override fun getSelectedTicket(): List<Ticket> = preferencesTicket
+    override fun getSelectedTicket(): List<SavingTicket> = preferencesTicket
 
 
 }
