@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -8,24 +10,22 @@
             type="com.oruel.testmydoc.personal_area.PersonalAreaViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/logo_image"
-            android:layout_width="112dp"
-            android:layout_height="106dp"
+            android:layout_width="71dp"
+            android:layout_height="78dp"
             android:src="@drawable/logo_bood"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="50dp"
             android:src="@drawable/ic_settings"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,46 +42,9 @@
             app:layout_constraintTop_toBottomOf="@id/logo_image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/contact_box"
+            app:layout_constraintBottom_toTopOf="parent"
             tools:listitem="@layout/view_holder_tickets"
             />
-
-        <ImageView
-            android:id="@+id/add_box"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginBottom="20dp"
-            android:padding="10dp"
-            android:src="@drawable/ic_add_box"
-            android:background="@drawable/wrapper_box"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/contact_box"
-            />
-
-        <ImageView
-            android:id="@+id/contact_box"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_contacts"
-            android:background="@drawable/wrapper_box"
-            android:padding="10dp"
-            app:layout_constraintStart_toEndOf="@id/add_box"
-            app:layout_constraintTop_toTopOf="@id/add_box"
-            app:layout_constraintEnd_toStartOf="@id/call_box"
-            app:layout_constraintBottom_toBottomOf="@id/add_box"/>
-
-        <ImageView
-            android:id="@+id/call_box"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_call"
-            android:background="@drawable/wrapper_box"
-            android:padding="10dp"
-            app:layout_constraintStart_toEndOf="@id/contact_box"
-            app:layout_constraintTop_toTopOf="@id/add_box"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/add_box"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
