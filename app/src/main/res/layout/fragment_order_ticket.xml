@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -47,7 +48,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/doctor_card"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,17 +59,18 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/doctor_image"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="10dp"
                         android:src="@drawable/ic_baseline_person_24"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/surname"
@@ -76,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
-                        android:text="Фамилия"
+                        tools:text="Фамилия"
                         android:textAlignment="center"
                         android:textSize="10pt"
                         android:textStyle="bold|italic"
@@ -88,7 +90,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Имя"
+                        tools:text="Имя"
                         android:textAlignment="center"
                         android:textSize="8pt"
                         android:textStyle="bold|italic"
@@ -100,7 +102,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Отчество"
+                        tools:text="Отчество"
                         android:textAlignment="center"
                         android:textSize="8pt"
                         android:textStyle="bold|italic"
