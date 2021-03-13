@@ -13,6 +13,7 @@ import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.oruel.testmydoc.R
 import com.oruel.testmydoc.databinding.FragmentOrderTicketBinding
 
 
@@ -45,14 +46,14 @@ class OrderTicketFragment : Fragment() {
 
 
         val all_rooms: Array<String> = arrayOf("1","2","3")
-        val rooms: Spinner = view.findViewById(R.id.rooms)
+//        val rooms: Spinner = view.findViewById(R.id.rooms)
         val adapter = ArrayAdapter(
             requireContext(), // Context
             android.R.layout.simple_spinner_item, // Layout
         all_rooms
         )
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line)
-        rooms.adapter = adapter
+//        rooms.adapter = adapter
 
 
     }

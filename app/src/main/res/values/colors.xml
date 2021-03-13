@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ticket_container_bg">#e6e6e6</color>
+    <color name="container_stroke">#C4C4C4</color>
+    <color name="cardview_bg">#EAE8E8</color>
 </resources>
