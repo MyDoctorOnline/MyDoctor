@@ -9,8 +9,6 @@ import java.util.*
 
 class OrderTicketViewModel : ViewModel() {
 
-    var selectedItem = MutableLiveData<Date>()
-
     private var _dates = MutableLiveData<List<Date>>().apply {
         listOf<Date>(
             Date(1991, 7, 8),
