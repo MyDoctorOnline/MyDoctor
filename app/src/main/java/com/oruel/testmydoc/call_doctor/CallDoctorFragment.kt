@@ -10,7 +10,7 @@ import com.oruel.testmydoc.databinding.FragmentCallDoctorBinding
 
 class CallDoctorFragment : Fragment() {
 
-//    lateinit var view: FragmentDashboardBinding
+
 
     override fun onCreateView(
             inflater: LayoutInflater,

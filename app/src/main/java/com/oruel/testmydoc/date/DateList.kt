@@ -1,12 +1,32 @@
 package com.oruel.testmydoc.date
 
-import java.util.*
-    val list = listOf<Date>(
-        Date(0, 7, 8),
-        Date(2001, 11, 11),
-        Date(1054, 8, 23),
-        Date(1851, 12, 12),
-        Date(1331, 2, 28),
-        Date(2021, 3, 13),
-        Date(2020, 12, 31)
-    )
+import android.os.Build
+import androidx.annotation.RequiresApi
+import java.time.LocalDate
+
+@RequiresApi(Build.VERSION_CODES.O)
+fun getList(): List<LocalDate> = listOf<LocalDate>(
+    LocalDate.of(2021, 3, 6),
+    LocalDate.of(2021, 3, 7),
+    LocalDate.of(2021, 3, 8),
+    LocalDate.of(2021, 3, 9),
+    LocalDate.of(2021, 3, 10),
+    LocalDate.of(2021, 3, 11),
+    LocalDate.of(2021, 3, 12),
+    LocalDate.of(2021, 3, 13),
+    LocalDate.of(2021, 3, 15),
+    LocalDate.of(2021, 3, 16),
+    LocalDate.of(2021, 3, 17),
+    LocalDate.of(2021, 3, 18),
+    LocalDate.of(2021, 3, 14),
+)
+
+@RequiresApi(Build.VERSION_CODES.O)
+fun String.toDate(): LocalDate {
+    return LocalDate.parse(this)
+}
+
+@RequiresApi(Build.VERSION_CODES.O)
+fun LocalDate.toStr(): String {
+    return "${this.dayOfMonth}.${this.month.value}"
+}

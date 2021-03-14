@@ -1,19 +1,23 @@
 package com.oruel.testmydoc.order_ticket
 
-import android.content.ClipData.Item
+
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.oruel.testmydoc.date.list
+import com.oruel.testmydoc.date.getList
+
 
 import java.util.*
 
 
 class OrderTicketViewModel : ViewModel() {
 
-    private var _dates = MutableLiveData<List<Date>>().apply {
-        list
-    }
+//    @RequiresApi(Build.VERSION_CODES.O)
+//    private var _dates = MutableLiveData<List<Date>>().apply {
+//        getList()
+//    }
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is OrderTicketFragment"
