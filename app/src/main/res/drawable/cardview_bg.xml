@@ -4,7 +4,7 @@
     android:layout_width="match_parent">
 
     <corners android:radius="8dp" />
-    <solid android:color="@color/cardview_bg" />
+    <solid android:color="@color/cardview_light_background" />
     <stroke android:width="3dp"
-        android:color="@color/container_stroke"/>
+        android:color="@color/cardview_dark_background"/>
 </shape>
