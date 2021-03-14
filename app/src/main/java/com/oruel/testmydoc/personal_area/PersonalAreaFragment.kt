@@ -26,10 +26,13 @@ class PersonalAreaFragment : Fragment() {
         val factory = ViewModelProvider.AndroidViewModelFactory(requireActivity().application)
         val adapter = SavingTicketAdapter(
             listOf(
-                SavingTicket(Ticket("123", "123", "123"), "123", "123"),
-                SavingTicket(Ticket("321", "321", "321"), "321", "321"),
-                SavingTicket(Ticket("456", "456", "456"), "456", "456")
-            ).createListPair()
+                Pair<String,String>("12.30","15 Марта"),
+                Pair<String,String>("14.30","15 Марта"),
+                Pair<String,String>("10.00","16 Марта"))
+//                SavingTicket(Ticket("123", "123", "12.30"), "123", "15 Марта"),
+//                SavingTicket(Ticket("321", "321", "14.30"), "321", "15 Марта"),
+//                SavingTicket(Ticket("456", "456", "10.00"), "456", "16 Марта")
+//            ).createListPair()
         ) {}
 
         val layoutManager = StaggeredGridLayoutManager(

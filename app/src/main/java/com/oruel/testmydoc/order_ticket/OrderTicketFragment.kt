@@ -35,14 +35,14 @@ class OrderTicketFragment : Fragment() {
         val view = FragmentOrderTicketBinding.inflate(inflater, container, false)
         view.vm = ViewModelProvider(this).get(OrderTicketViewModel::class.java)
         val adapter = OrderTicketAdapter {
-            Toast.makeText(requireContext(), "11", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(requireContext(), "11", Toast.LENGTH_SHORT).show()
         }
         view.horizontalList.adapter = adapter
 
 
         for (item in view.horizontalList) {
             item.setOnClickListener {
-                Toast.makeText(requireContext(), "11", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(requireContext(), "11", Toast.LENGTH_SHORT).show()
             }
         }
 

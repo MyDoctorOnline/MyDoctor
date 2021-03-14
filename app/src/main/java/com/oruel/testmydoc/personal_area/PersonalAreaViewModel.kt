@@ -11,9 +11,12 @@ class PersonalAreaViewModel(application: Application) : AndroidViewModel(applica
 //    val liveData by lazy { MutableLiveData<SavingTicket>() }
     fun observeSavingTicket(observer: ObserverSavingTicket) {
         observer.update(listOf(
-            SavingTicket(Ticket("123", "123", "123"), "123", "123"),
-            SavingTicket(Ticket("321", "321", "321"), "321", "321"),
-            SavingTicket(Ticket("456", "456", "456"), "456", "456")
-        ).createListPair())
+            Pair<String,String>("12.30","15 Марта"),
+            Pair<String,String>("14.30","15 Марта"),
+            Pair<String,String>("10.00","16 Марта"))
+//            SavingTicket(Ticket("123", "123", "123"), "123", "123"),
+//            SavingTicket(Ticket("321", "321", "321"), "321", "321"),
+//            SavingTicket(Ticket("456", "456", "456"), "456", "456")
+        )
     }
 }
