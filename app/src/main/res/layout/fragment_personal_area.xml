@@ -8,12 +8,15 @@
         <variable
             name="vm"
             type="com.oruel.testmydoc.personal_area.PersonalAreaViewModel" />
+
         <variable
             name="adapterRecycler"
             type="com.oruel.testmydoc.personal_area.SavingTicketAdapter" />
+
         <variable
             name="layoutManager"
             type="androidx.recyclerview.widget.StaggeredGridLayoutManager" />
+
         <variable
             name="view"
             type="com.oruel.testmydoc.personal_area.PersonalAreaFragment" />
@@ -23,39 +26,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"
+            android:layout_height="wrap_content">
+
+        </androidx.constraintlayout.widget.Guideline>
+
         <ImageView
             android:id="@+id/logo_image"
-            android:layout_width="71dp"
-            android:layout_height="78dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/logo_bood"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/start"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="50dp"
+            android:onClick="@{() -> view.showAlert()}"
             android:src="@drawable/ic_settings"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/logo_image"
             app:layout_constraintBottom_toBottomOf="@id/logo_image"
-            android:onClick="@{() -> view.showAlert()}"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/logo_image" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/ticket_recyclerview"
             android:layout_width="300dp"
             android:layout_height="0dp"
-            android:padding="5dp"
-            android:adapter="@{adapterRecycler}"
-            app:layoutManager="@{layoutManager}"
             android:layout_margin="10dp"
-            app:layout_constraintTop_toBottomOf="@id/logo_image"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:adapter="@{adapterRecycler}"
+            android:padding="5dp"
+            app:layoutManager="@{layoutManager}"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:listitem="@layout/view_holder_tickets"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_image"
+            tools:listitem="@layout/view_holder_tickets" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
