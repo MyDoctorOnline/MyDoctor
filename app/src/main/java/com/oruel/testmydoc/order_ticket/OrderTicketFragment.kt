@@ -55,7 +55,7 @@ class OrderTicketFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val all_rooms: Array<String> = arrayOf("1", "2", "3")
+        val all_rooms: Array<String> = arrayOf("Кабинеты химиотерапевтов - 309 Хирург ", "Кабинеты онкологов - 203 Онколог", "Прием заведующих")
         val rooms: Spinner = view.findViewById(R.id.rooms)
         val recyclerViewTicket: RecyclerView = view.findViewById(R.id.choose_tickets)
         val adapter = ArrayAdapter(
@@ -66,7 +66,12 @@ class OrderTicketFragment : Fragment() {
         rooms.adapter = adapter
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line)
         val adapterSelectTicket = SelectTicketAdapter(
-            listOf("12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30","12.30",)
+            listOf("8.30","9.00","9.30","10.00",
+                    "10.30","11.00","12.00","12.30",
+                    "13.00","13.30","14.00","14.30",
+                    "15.00","15.30","16.00","16.30",
+                    "17.30","18.00","18.30","19.00",
+                    "19.30","20.00")
         ) {}
         recyclerViewTicket.adapter = adapterSelectTicket
         val layoutManager = StaggeredGridLayoutManager(
