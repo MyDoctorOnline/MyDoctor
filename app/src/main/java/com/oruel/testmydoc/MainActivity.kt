@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         navController.currentDestination
         val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_select_hospital, R.id.navigation_personal_area))
+                R.id.navigation_order_ticket, R.id.navigation_personal_area))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
             // NetworkModule().getRoom(40)
