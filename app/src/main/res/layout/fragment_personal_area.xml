@@ -10,10 +10,13 @@
             type="com.oruel.testmydoc.personal_area.PersonalAreaViewModel" />
         <variable
             name="adapterRecycler"
-            type="com.oruel.testmydoc.personal_area.ObserverSavingTicketAdapter" />
+            type="com.oruel.testmydoc.personal_area.SavingTicketAdapter" />
         <variable
             name="layoutManager"
             type="androidx.recyclerview.widget.StaggeredGridLayoutManager" />
+        <variable
+            name="view"
+            type="com.oruel.testmydoc.personal_area.PersonalAreaFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,7 +39,8 @@
             android:src="@drawable/ic_settings"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/logo_image"
-            app:layout_constraintBottom_toBottomOf="@id/logo_image"/>
+            app:layout_constraintBottom_toBottomOf="@id/logo_image"
+            android:onClick="@{() -> view.showAlert()}"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/ticket_recyclerview"

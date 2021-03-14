@@ -11,10 +11,10 @@ class Dialogs(private val title:String,private val clickPositiveButton:()->Unit,
             val builderDialog = androidx.appcompat.app.AlertDialog.Builder(it)
             builderDialog.setTitle(title)
 //                    .setMessage("message")
-                .setNegativeButton("No") { dialog, id ->
+                .setNegativeButton("Нет") { dialog, id ->
                     clickNegativeButton()
                 }
-                .setPositiveButton("Yea") { dialog, id ->
+                .setPositiveButton("Да") { dialog, id ->
                     clickPositiveButton()
                 }
                 .create()

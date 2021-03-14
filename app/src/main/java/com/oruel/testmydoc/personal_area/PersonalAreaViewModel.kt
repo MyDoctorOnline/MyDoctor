@@ -14,6 +14,6 @@ class PersonalAreaViewModel(application: Application) : AndroidViewModel(applica
             SavingTicket(Ticket("123", "123", "123"), "123", "123"),
             SavingTicket(Ticket("321", "321", "321"), "321", "321"),
             SavingTicket(Ticket("456", "456", "456"), "456", "456")
-        ))
+        ).createListPair())
     }
 }

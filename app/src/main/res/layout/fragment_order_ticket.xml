@@ -8,6 +8,12 @@
         <variable
             name="vm"
             type="com.oruel.testmydoc.order_ticket.OrderTicketViewModel" />
+<!--        <variable-->
+<!--            name="adapterRecyclerRecyclerViewTicket"-->
+<!--            type="com.oruel.testmydoc.personal_area.ObserverSavingTicketAdapter" />-->
+<!--        <variable-->
+<!--            name="layoutManagerRecyclerViewTicket"-->
+<!--            type="androidx.recyclerview.widget.StaggeredGridLayoutManager" />-->
     </data>
 
     <ScrollView
