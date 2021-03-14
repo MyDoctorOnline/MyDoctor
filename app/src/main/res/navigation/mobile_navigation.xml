@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_select_hospital">
+    app:startDestination="@id/navigation_order_ticket">
 
     <fragment
         android:id="@+id/navigation_call_doctor"
@@ -23,29 +23,31 @@
         <action
             android:id="@+id/action_navigation_order_ticket_to_navigation_authorization"
             app:destination="@id/navigation_authorization" />
+        <action
+            android:id="@+id/action_navigation_order_ticket_to_navigation_call_doctor"
+            app:destination="@id/navigation_call_doctor" />
+        <action
+            android:id="@+id/action_navigation_order_ticket_to_navigation_personal_area"
+            app:destination="@id/navigation_personal_area" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_authorization"
         android:name="com.oruel.testmydoc.authorization.AuthorizationFragment"
         android:label="@string/title_authorization"
-        tools:layout="@layout/fragment_authorization" />
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_navigation_authorization_to_navigation_order_ticket"
+            app:destination="@id/navigation_order_ticket" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_personal_area"
         android:name="com.oruel.testmydoc.personal_area.PersonalAreaFragment"
         android:label="@string/title_personal_area"
-        tools:layout="@layout/fragment_personal_area" />
-    <fragment
-        android:id="@+id/navigation_select_hospital"
-        android:name="com.oruel.testmydoc.select_hospital.view.SelectHospitalNavigationControllerFragment"
-        android:label="@string/title_select_hospital"
-        tools:layout="@layout/fragment_select_hospital" >
+        tools:layout="@layout/fragment_personal_area" >
         <action
-            android:id="@+id/action_navigation_select_hospital_to_navigation_order_ticket"
+            android:id="@+id/action_navigation_personal_area_to_navigation_order_ticket"
             app:destination="@id/navigation_order_ticket" />
-        <action
-            android:id="@+id/action_navigation_select_hospital_to_navigation_call_doctor"
-            app:destination="@id/navigation_call_doctor" />
     </fragment>
 
 </navigation>

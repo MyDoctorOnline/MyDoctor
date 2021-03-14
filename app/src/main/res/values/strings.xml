@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">TestMyDoc</string>
-    <string name="title_call_doctor">Call doctor</string>
-    <string name="title_order_ticket">Order ticket</string>
-    <string name="title_authorization">Authorization</string>
-    <string name="title_personal_area">Personal Area</string>
-    <string name="title_select_hospital">Select Hospital</string>
+    <string name="title_call_doctor">Регистратура</string>
+    <string name="title_order_ticket">Заказ талона</string>
+    <string name="title_authorization">Авторизация</string>
+    <string name="title_personal_area">Личный кабинет</string>
+    <string name="title_select_hospital">Выбор кабинета</string>
     <string name="surname">Фамилия</string>
     <string name="name">Имя</string>
     <string name="personal_number">Личный номер</string>

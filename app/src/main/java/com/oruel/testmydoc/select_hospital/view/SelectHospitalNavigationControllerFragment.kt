@@ -25,10 +25,11 @@ class SelectHospitalNavigationControllerFragment : Fragment(), SelectHospitalNav
     }
 
     override fun navigateOrderTicket(){
-        findNavController().navigate(R.id.action_navigation_select_hospital_to_navigation_order_ticket)
+        findNavController().navigate(R.id.navigation_order_ticket)
     }
 
     override fun navigateCallDoctor(){
-        findNavController().navigate(R.id.action_navigation_select_hospital_to_navigation_call_doctor)
+        findNavController().navigate(R.id.navigation_order_ticket)
     }
+
 }
